@@ -37,7 +37,7 @@ public class Application extends javafx.application.Application {
 	        
 	        HomeController c = loader.getController();
 	        
-	        primaryStage.setTitle("title");
+	        primaryStage.setTitle("Adventura");
 	        primaryStage.setScene(new Scene(root));
 	        primaryStage.show();
 	}

@@ -9,13 +9,14 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.petrpanek.adventura.uiText.HomeController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.petrpanek.adventura.uiText.HomeController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -24,30 +25,33 @@
   <rowConstraints>
     <RowConstraints vgrow="NEVER" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints vgrow="NEVER" />
+      <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="167.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="80.0" minHeight="58.0" prefHeight="60.0" vgrow="NEVER" />
   </rowConstraints>
    <children>
       <MenuBar prefHeight="29.0" prefWidth="198.0" GridPane.columnSpan="3">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Soubor">
             <items>
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Uprav">
             <items>
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu mnemonicParsing="false" text="Napoveda">
             <items>
               <MenuItem mnemonicParsing="false" text="About" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@herniPlan.png" />
+         </image></ImageView>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
             <Label text="Obsah batohu" />
@@ -63,7 +67,7 @@
             </ListView>
          </children>
          <GridPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
          </GridPane.margin>
       </VBox>
       <VBox GridPane.rowIndex="2">
@@ -72,38 +76,31 @@
             <ListView prefHeight="200.0" prefWidth="200.0" />
          </children>
          <GridPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
          </GridPane.margin>
       </VBox>
       <VBox GridPane.columnIndex="2" GridPane.rowIndex="2">
          <children>
-            <Label text="Veci" />
+            <Label text="Veci v mistnosti" />
             <ListView prefHeight="200.0" prefWidth="200.0" />
          </children>
          <GridPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
          </GridPane.margin>
       </VBox>
-      <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+      <VBox GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
          <children>
-            <TextArea>
-               <VBox.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" />
-               </VBox.margin>
-            </TextArea>
-         </children>
-         <GridPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </GridPane.margin>
-      </VBox>
-      <VBox GridPane.columnIndex="1" GridPane.rowIndex="3">
-         <children>
-            <Label text="Label" />
+            <Label text="Zadej Prikaz" />
             <TextField fx:id="vstupniText" onAction="#odesliPrikaz" />
          </children>
          <GridPane.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="30.0" left="20.0" right="20.0" top="20.0" />
          </GridPane.margin>
       </VBox>
+      <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </GridPane.margin>
+      </TextArea>
    </children>
 </GridPane>
